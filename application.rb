@@ -6,7 +6,6 @@ class Recursion
     end
 
     pivot = array.sample
-    p pivot
     array.delete_at(array.index(pivot))
     less = []
     greater = []
@@ -20,12 +19,9 @@ class Recursion
     end
 
     sorted_array = []
-    p sorted_array
     sorted_array << self.quick_sort(less)
-    p sorted_array
     sorted_array << pivot
     sorted_array << self.quick_sort(greater)
-    p sorted_array
     sorted_array.flatten!
   end
 
@@ -34,7 +30,7 @@ end
 
 array = (1..999).to_a.sample 10
 
-Recursion.new.quick_sort(array)
+p Recursion.new.quick_sort(array)
 
 
 
