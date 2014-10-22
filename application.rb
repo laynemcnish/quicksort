@@ -32,7 +32,7 @@ class Recursion
 
 end
 
-array = [3, 7, 8, 5, 2, 1, 5, 9, 4]
+array = (1..999).to_a.sample 10
 
 Recursion.new.quick_sort(array)
 
